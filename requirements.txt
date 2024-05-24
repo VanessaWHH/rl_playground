@@ -1,0 +1,9 @@
+pygame
+gymnasium
+stable-baselines3
+sb3-contrib
+rl-zoo3
+optuna
+fire
+imageio
+tensorboard

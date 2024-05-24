@@ -1,0 +1,8 @@
+- OS: Linux-5.15.0-46-generic-x86_64-with-glibc2.17 # 49~20.04.1-Ubuntu SMP Thu Aug 4 19:15:44 UTC 2022
+- Python: 3.8.19
+- Stable-Baselines3: 2.3.2
+- PyTorch: 2.3.0+cu121
+- GPU Enabled: True
+- Numpy: 1.24.4
+- Cloudpickle: 3.0.0
+- Gymnasium: 0.29.1
