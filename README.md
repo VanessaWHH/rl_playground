@@ -4,9 +4,7 @@
 
 ### Display
 
-see the gif folder for more displays.
-
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/a0fd846f-cc5e-488d-ba0c-9d472c245d66) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/39daaf50-be11-4e16-8d57-6c9e9ef89b54) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1cf46c78-68ec-40a1-8e08-350a7ef56550)
+see the gif folder for displays.
 
 ### Experimental Environment Configuration
 
