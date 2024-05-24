@@ -75,6 +75,7 @@ eval.py trained_models
 ### Training Agents
 
 train the Snake agent in an obstacle-free game environment
+
 'ppo' can be changed to 'dqn', 'a2c', 'maskableppo'.
 ```bash
 python train.py configs/config_blank.py ppo
