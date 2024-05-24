@@ -10,7 +10,7 @@ see the gif folder for displays.
 
 1. Ubuntu
 2. GPU
-3. external libraries
+3. libraries
 ```bash
 pip install -r requirements.txt
 ```
