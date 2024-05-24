@@ -5,9 +5,8 @@
 ### Display
 
 see the gif folder for more displays.
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/a0fd846f-cc5e-488d-ba0c-9d472c245d66)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/39daaf50-be11-4e16-8d57-6c9e9ef89b54)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1cf46c78-68ec-40a1-8e08-350a7ef56550)
+
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/a0fd846f-cc5e-488d-ba0c-9d472c245d66) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/39daaf50-be11-4e16-8d57-6c9e9ef89b54) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1cf46c78-68ec-40a1-8e08-350a7ef56550)
 
 ### Experimental Environment Configuration
 
@@ -106,15 +105,11 @@ execute the following command in the home directory to view all training curves 
 ```bash
 tensorboard --logdir .
 ```
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/b96e1777-652f-4b93-a3b9-f4c8cade53ef)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/26be3a52-861d-49dc-93e8-0307d6447e24)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/82f4ba84-ecc4-44a3-bf52-5d89de214e71)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/7df1a6c5-de57-4e19-b798-b2a5602f5cd2)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1b6fd5a0-03fe-48f5-96e0-a1a8a4768dbc)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/064f84ec-f00a-473f-a4bd-6bc773c2bf52)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/404f83e5-2aa3-4b6d-9c2d-8df422fc4041)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/6344a167-3583-435b-a221-018320bf9d35)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/f9fcbaed-eb12-415a-b194-1fcca04c4475)
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/b96e1777-652f-4b93-a3b9-f4c8cade53ef) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/26be3a52-861d-49dc-93e8-0307d6447e24)
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/82f4ba84-ecc4-44a3-bf52-5d89de214e71) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/7df1a6c5-de57-4e19-b798-b2a5602f5cd2)
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1b6fd5a0-03fe-48f5-96e0-a1a8a4768dbc) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/064f84ec-f00a-473f-a4bd-6bc773c2bf52)
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/404f83e5-2aa3-4b6d-9c2d-8df422fc4041) ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/6344a167-3583-435b-a221-018320bf9d35)
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/f9fcbaed-eb12-415a-b194-1fcca04c4475) 
 ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/78cd326d-a16d-42ce-bafa-1d27a43adcad)
 ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/9877a4c1-f05a-4224-924c-6eb3e5f87d59)
 
