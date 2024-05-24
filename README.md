@@ -39,11 +39,11 @@ pip install -r requirements.txt
 └───gif
 ```
 
-1. 'Environment' module: envs
+1. 'environment' module: envs
 2. 'train' module: train
-3. 'train_hpo' module: train_hpo
+3. 'hyperparameter optimization' module: train_hpo
 4. 'eval' module: eval.py trained_models
-5. 'config' module: configs configs_hpo common.py
+5. 'configs' module: configs configs_hpo common
 
 ### Game Environment
 
