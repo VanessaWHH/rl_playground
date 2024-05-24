@@ -15,7 +15,7 @@ see the gif folder for displays.
 pip install -r requirements.txt
 ```
 
-### Overall Architecture
+### Architecture
 
 ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/2e151a34-3654-44f9-beb0-ffa7753ea32e)
 
