@@ -43,21 +43,21 @@ pip install -r requirements.txt
 ```bash
 envs
 ```
-2. training module
+2. configuration module
+```bash
+configs configs_hpo common
+```
+3. training module
 ```bash
 train
 ```
-3. hyperparameter optimization module
+4. hyperparameter optimization module
 ```bash
 train_hpo
 ```
-4. evaluation module
+5. evaluation module
 ```bash
 eval.py trained_models
-```
-5. configuration module
-```bash
-configs configs_hpo common
 ```
 
 ### Game Environment
