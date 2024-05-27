@@ -4,7 +4,7 @@
 
 ### Display
 
-see the gif folder for displays
+see the gif folder for more displays
 
 game environment without obstacles
 
