@@ -15,13 +15,18 @@ from envs.snake_env import SnakeEnv
 
 """
 1. eval trained model
+
 python eval.py eval_agent a2c ../trained_models/trained_models_a2c_cnn_nenvs32_best \
     --level_map envs/levels/12x12-walls.json \
     --save_to_gif gif_test
 
+
 2. compare models
+
 python eval.py eval_all_blank gif_test_all
 python eval.py eval_all_walls gif_walls_test_all
+
+or
 
 python eval.py eval_all_blank gif_test_all >eval_log.txt
 python eval.py eval_all_walls gif_walls_test_all >eval_log.txt
@@ -142,10 +147,10 @@ def eval_agent(
             f"Episode {episode + 1}: Reward Sum: {episode_reward:.4f}, Score: {episode_score}, Total Steps: {num_step}, Snake Size: {snake_size}"
         )
         total_reward += episode_reward
-        total_score += env.score
+        total_score += episode_score
 
         if save_to_gif:
-            gif_path = os.path.join(save_to_gif, model, f"{model}-ep{episode}.gif")
+            gif_path = os.path.join(save_to_gif, model, f"{model}-ep{episode}-score{episode_score}.gif")
             fps = 30
             # speed[2x,3x]
             step = min(3, max(2, len(images) // 30))
@@ -202,34 +207,14 @@ def eval_all_walls(save_to_gif: str):
     models = {
         "a2c-walls": (
             A2C,
-            "./trained_models/trained_models_walls_a2c_32/a2c_final.zip",
+            "./trained_models/trained_models_a2c_cnn_nenvs32_walls_finetune/trained_models_a2c_cnn_hand_l12walls_finetune_nenvs32/a2c_snake_final.zip",
             "envs/levels/12x12-walls.json",
         ),
         "a2c-refresh": (
             A2C,
-            "./trained_models/trained_models_walls_a2c_32/a2c_final.zip",
+            "./trained_models/trained_models_a2c_cnn_nenvs32_walls_finetune/trained_models_a2c_cnn_hand_l12walls_finetune_nenvs32/a2c_snake_final.zip",
             "envs/levels/12x12-refresh.json",
-        ),
-        "ppo-walls": (
-            PPO,
-            "./trained_models/trained_models_walls_ppo_32/ppo_final.zip",
-            "envs/levels/12x12-walls.json",
-        ),
-        "ppo-refresh": (
-            PPO,
-            "./trained_models/trained_models_walls_ppo_32/ppo_final.zip",
-            "envs/levels/12x12-refresh.json",
-        ),
-        "maskableppo-walls": (
-            MaskablePPO,
-            "./trained_models/trained_models_walls_maskableppo_32/maskableppo_final.zip",
-            "envs/levels/12x12-walls.json",
-        ),
-        "maskableppo-refresh": (
-            MaskablePPO,
-            "./trained_models/trained_models_walls_maskableppo_32/maskableppo_final.zip",
-            "envs/levels/12x12-refresh.json",
-        ),
+        )
     }
     summaries = {}
     for model, agent in models.items():

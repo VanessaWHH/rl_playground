@@ -1,4 +1,3 @@
-import importlib.util
 import os
 import random
 import sys
@@ -7,27 +6,12 @@ from torch import nn
 import fire
 from stable_baselines3.common.vec_env import SubprocVecEnv
 
-from common import ALGOS, make_env, make_checkpoint_callback, class_to_dict
+from common import ALGOS, load_config, gen_random_seeds, make_env, make_checkpoint_callback, class_to_dict 
 
 """
 python train.py configs/config_blank.py ppo
 python train.py configs/config_walls.py ppo
 """
-
-
-def load_config(config: str, exp_name: str):
-    spec = importlib.util.spec_from_file_location("configs", config)
-    configs = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(configs)
-    return eval("configs." + exp_name)
-
-
-def gen_random_seeds(num: int):
-    """Generate a list of random seeds for each environment"""
-    seed_set = set()
-    while len(seed_set) < num:
-        seed_set.add(random.randint(0, 1e9))
-    return seed_set
 
 
 def train(config: str, exp_name: str):

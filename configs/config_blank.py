@@ -1,11 +1,7 @@
 from rl_zoo3.utils import linear_schedule
 from torch import nn
 
-
-def gen_ts():
-    import time
-
-    return time.strftime("%y%m%d-%H%M%S", time.localtime())
+from common import gen_ts
 
 
 def my_linear_schedule(initial_value, final_value=0.0):
@@ -23,7 +19,7 @@ def my_linear_schedule(initial_value, final_value=0.0):
 class a2c:
     algo = "a2c"
     n_envs = 32
-    # If killed when n_nevs=32, n_envs is set to 8
+    ## If killed when n_nevs=32, n_envs is set to 8
     # n_envs = 8
     level_map = "envs/levels/12x12-blank.json"
     pretrain = ""
@@ -64,7 +60,7 @@ class dqn:
 class ppo:
     algo = "ppo"
     n_envs = 32
-    # If killed when n_nevs=32, n_envs is set to 8
+    ## If killed when n_nevs=32, n_envs is set to 8
     # n_envs = 8
     level_map = "envs/levels/12x12-blank.json"
     pretrain = ""
@@ -85,7 +81,7 @@ class ppo:
 class maskableppo:
     algo = "maskableppo"
     n_envs = 32
-    # If killed when n_nevs=32, n_envs is set to 8
+    ## If killed when n_nevs=32, n_envs is set to 8
     # n_envs = 8
     level_map = "envs/levels/12x12-blank.json"
     pretrain = ""

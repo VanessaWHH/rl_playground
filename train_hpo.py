@@ -13,33 +13,12 @@ from stable_baselines3.common.utils import safe_mean
 
 from rl_zoo3.utils import linear_schedule
 
-from common import ALGOS, make_env, make_checkpoint_callback, class_to_dict, filter_dict
+from common import ALGOS, load_config, gen_random_seeds, make_env, make_checkpoint_callback, class_to_dict, filter_dict, gen_ts
 
 
 """
 python train_hpo.py configs_hpo/configs_hpo.py ppo
 """
-
-
-def gen_ts():
-    import time
-
-    return time.strftime("%y%m%d-%H%M%S", time.localtime())
-
-
-def load_config(config_path: str, exp_name: str):
-    spec = importlib.util.spec_from_file_location("configs", config_path)
-    configs = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(configs)
-    return getattr(configs, exp_name)
-
-
-def gen_random_seeds(num: int):
-    """Generate a list of random seeds for each environment"""
-    seed_set = set()
-    while len(seed_set) < num:
-        seed_set.add(random.randint(0, 1e9))
-    return seed_set
 
 
 def objective(trial, config_path, exp_name): 

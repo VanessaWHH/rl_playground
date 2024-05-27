@@ -1,6 +1,7 @@
 import os
 import sys
 import random
+import importlib.util
 
 from sb3_contrib import QRDQN, MaskablePPO
 from sb3_contrib.common.wrappers import ActionMasker
@@ -22,6 +23,21 @@ ALGOS = {
     "maskableppo": MaskablePPO,
     "maskableppo2": MaskablePPO,
 }
+
+
+def load_config(config_path: str, exp_name: str):
+    spec = importlib.util.spec_from_file_location("configs", config_path)
+    configs = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(configs)
+    return getattr(configs, exp_name)
+
+
+def gen_random_seeds(num: int):
+    """Generate a list of random seeds for each environment"""
+    seed_set = set()
+    while len(seed_set) < num:
+        seed_set.add(random.randint(0, 1e9))
+    return seed_set
 
 
 def make_env(seed: int, level_map: str):
@@ -55,4 +71,11 @@ def filter_dict(src):
     black_keys = ["__module__", "__dict__", "__weakref__", "__doc__"]
     params = {k: v for k, v in src.items() if k not in black_keys}
     return params
+
+
+def gen_ts():
+    import time
+
+    return time.strftime("%y%m%d-%H%M%S", time.localtime())
+
 

@@ -1,11 +1,6 @@
 from torch import nn 
 
-
-def gen_ts():
-    import time
-
-    return time.strftime("%y%m%d-%H%M%S", time.localtime())
-
+from common import gen_ts
 
 class a2c:
     algo = "a2c"
