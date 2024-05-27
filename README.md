@@ -6,16 +6,41 @@
 
 see the gif folder for displays
 
+game environment without obstacles
+
+![a2c-ep0-score1410](https://github.com/VanessaWHH/rl_playground/assets/94059478/5e81b7bf-694c-464e-b3b2-75c8996f1857)
+
+at the beginning of each game, obstacles in the game environment are randomly generated, and their positions are fixed during the game
+
+![a2c-walls-ep6-score730](https://github.com/VanessaWHH/rl_playground/assets/94059478/a59e44a5-b683-41d6-9a58-677ed566949b)
+
+at the beginning of each game, obstacles in the game environment are randomly generated, and their positions also change randomly during the game
+
+![a2c-refresh-ep8-score590](https://github.com/VanessaWHH/rl_playground/assets/94059478/4e262e0d-2984-47da-a1f6-4d0f74b7041f)
+
 ### Experimental Environment Configuration
 
-1. Ubuntu
-2. GPU
-3. libraries
+
 ```bash
 pip install -r requirements.txt
 ```
+```bash
+python==3.10.9
+pygame==2.5.2
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+sb3-contrib==2.3.0
+rl-zoo3==2.3.0
+optuna==3.6.1
+optuna-dashboard==0.15.1
+fire==0.6.0
+imageio==2.34.1
+tensorboard==2.14.0
+```
+
 
 ### Architecture
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/15bd5288-4702-4206-bba9-365955a6361e)
 
 ```bash
 ├───envs
@@ -40,22 +65,32 @@ pip install -r requirements.txt
 ```
 
 1. environment module
+the environment module contains the implementation of different Snake game environments
+
 ```bash
 envs
 ```
 2. configuration module
+the configuration module contains hyperparameter configurations for different deep reinforcement learning algorithms, such as hyperparameter search ranges and hyperparameter values
+
 ```bash
 configs configs_hpo common
 ```
 3. training module
+the training module contains the complete process of creating models (loading pre-training), training models, logging, etc
+
 ```bash
 train
 ```
 4. hyperparameter optimization module
+this module contains the complete process of hyperparameter optimization
+
 ```bash
 train_hpo
 ```
 5. evaluation module
+the evaluation module contains complete processes such as loading models, environment interaction, and statistical data processes
+
 ```bash
 eval.py trained_models
 ```
@@ -117,16 +152,21 @@ execute the following command in the home directory to view all training curves 
 ```bash
 tensorboard --logdir .
 ```
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/b96e1777-652f-4b93-a3b9-f4c8cade53ef) 
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/26be3a52-861d-49dc-93e8-0307d6447e24)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/82f4ba84-ecc4-44a3-bf52-5d89de214e71) 
+
+omparison of the training curves of the A2C Snake agent under optimal hyperparameters and under default hyperparameters
+
 ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/7df1a6c5-de57-4e19-b798-b2a5602f5cd2)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/1b6fd5a0-03fe-48f5-96e0-a1a8a4768dbc) 
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/064f84ec-f00a-473f-a4bd-6bc773c2bf52)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/404f83e5-2aa3-4b6d-9c2d-8df422fc4041) 
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/6344a167-3583-435b-a221-018320bf9d35)
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/f9fcbaed-eb12-415a-b194-1fcca04c4475) 
-![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/78cd326d-a16d-42ce-bafa-1d27a43adcad)
+
+comparison of the training curves of the Snake agent corresponding to four deep reinforcement learning algorithms under optimal hyperparameters
+
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/320339aa-cedc-4900-be63-c5ce5dc15b87)
+
+comparison of training curves of A2C Snake agent under different numbers of parallel environments
+
+![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/84f8e553-7f6f-4748-aa6a-b2a6d96a032b)
+
+comparison of training curves of whether A2C Snake agent loads pre-training
+
 ![image](https://github.com/VanessaWHH/rl_playground/assets/94059478/9877a4c1-f05a-4224-924c-6eb3e5f87d59)
 
 
